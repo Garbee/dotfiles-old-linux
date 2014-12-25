@@ -101,3 +101,9 @@ cd ~
 mkdir .ssh
 cd .ssh
 ln -s ~/.dotfiles/ssh/config config
+
+# Setup zsh
+curl -L http://install.ohmyz.sh | sh
+mv ~/.zshrc ~/.zshrc-backup
+ln -s ~/.dotfiles/zshrc ~/.zshrc
+sudo chsh -s /bin/zsh jonathan
