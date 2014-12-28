@@ -1,3 +1,10 @@
+# Install Chrome Stable
+cd /tmp
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O chrome.deb
+sudo gdebi -n chrome.deb
+
+# Upgrade system
+cd ~
 sudo apt-get update
 sudo apt-get dist-upgrade -y
 
@@ -82,9 +89,7 @@ cd /tmp
 wget https://googledrive.com/host/0BwrjfAd1aTwVaTJVSDBXRGRCekE -O fonts.deb
 sudo gdebi -n fonts.deb
 
-# Install Chrome Stable
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O chrome.deb
-sudo gdebi -n chrome.deb
+
 
 # Add my user to www-data
 sudo usermod -a -G www-data jonathan
@@ -107,3 +112,7 @@ curl -L http://install.ohmyz.sh | sh
 mv ~/.zshrc ~/.zshrc-backup
 ln -s ~/.dotfiles/zshrc ~/.zshrc
 sudo chsh -s /bin/zsh jonathan
+
+# Configure php some
+echo 'umask 002' | sudo tee -a /etc/init/php5-fpm.conf
+sudo sed -i 's/memory_limit=128M/memory_limit=512M/g" /etc/php5/fpm/php.ini
