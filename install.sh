@@ -94,7 +94,8 @@ sublime-text \
 supervisor \
 pgadmin3 \
 audacity \
-vlc
+vlc \
+jpegoptim
 
 # Set new settings after software is installed
 gsettings set org.mate.applications-terminal "exec" "terminator"
