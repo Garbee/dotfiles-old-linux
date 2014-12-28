@@ -116,3 +116,31 @@ sudo chsh -s /bin/zsh jonathan
 # Configure php some
 echo 'umask 002' | sudo tee -a /etc/init/php5-fpm.conf
 sudo sed -i 's/memory_limit=128M/memory_limit=512M/g' /etc/php5/fpm/php.ini
+
+# Configure desktop
+gsettings set org.gnome.desktop.interface document-font-name "Source Sans Pro 12"
+gsettings set org.gnome.desktop.interface font-name "Source Sans Pro 12"
+gsettings set org.gnome.desktop.interface monospace-font-name "Source Code Pro 12"
+gsettings set org.gnome.desktop.media-handling automount-open false
+gsettings set org.gnome.desktop.media-handling autorun-never true
+gsettings set org.gnome.desktop.privacy old-files-age 60
+gsettings set org.gnome.desktop.privacy remove-old-trash-files true
+gsettings set org.gnome.desktop.privacy remove-old-temp-files true
+gsettings set org.gnome.desktop.wm.preferences titlebar-font "Source Sans Pro Bold 11"
+gsettings set org.mate.caja.desktop font "Source Sans Pro 11"
+gsettings set org.mate.applications-browser "exec" "google-chrome"
+gsettings set org.mate.applications-terminal "exec" "terminator"
+gsettings set org.mate.interface document-font-name "Source Sans Pro 11"
+gsettings set org.mate.interface font-name "Source Sans Pro 11"
+gsettings set org.mate.interface monospace-font-name "Source Code Pro 12"
+gsettings set org.mate.media-handling automount-open false
+gsettings set org.mate.media-handling autorun-never true
+gsettings set org.mate.peripherals-keyboard numlock-state on
+gsettings set org.mate.peripherals-touchpad scroll-method 2
+gsettings set org.mate.peripherals-touchpad disable-while-typing true
+gsettings set org.mate.dictionary print-font "Source Sans Pro 12"
+gsettings set org.mate.Marco.general mouse-button-modifier ""
+gsettings set org.mate.Marco.general titlebar-font "Source Sans Pro Bold 11"
+gsettings set org.mate.screensaver themes "['screensavers-cosmos-slideshow']"
+gsettings set org.mate.screensaver mode "single"
+gsettings set com.ubuntu.update-manager first-run false
