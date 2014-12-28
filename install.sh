@@ -115,4 +115,4 @@ sudo chsh -s /bin/zsh jonathan
 
 # Configure php some
 echo 'umask 002' | sudo tee -a /etc/init/php5-fpm.conf
-sudo sed -i 's/memory_limit=128M/memory_limit=512M/g" /etc/php5/fpm/php.ini
+sudo sed -i 's/memory_limit=128M/memory_limit=512M/g' /etc/php5/fpm/php.ini
