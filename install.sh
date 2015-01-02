@@ -30,12 +30,21 @@ gsettings set org.mate.peripherals-touchpad scroll-method 2
 gsettings set org.mate.peripherals-touchpad disable-while-typing true
 gsettings set org.mate.dictionary print-font "Source Sans Pro 12"
 gsettings set org.mate.Marco.general mouse-button-modifier ""
+gsettings set org.mate.Marco.general num-workspaces 1
 gsettings set org.mate.Marco.general titlebar-font "Source Sans Pro Bold 11"
 gsettings set org.mate.screensaver themes "['screensavers-cosmos-slideshow']"
 gsettings set org.mate.screensaver mode "single"
 gsettings set com.ubuntu.update-manager first-run false
 gsettings set org.mate.session idle-delay 300
 gsettings set org.gnome.desktop.session idle-delay 300
+gsettings set org.mate.Marco.global-keybindings switch-to-workspace-down ""
+gsettings set org.mate.Marco.global-keybindings switch-to-workspace-up ""
+gsettings set org.mate.Marco.global-keybindings switch-to-workspace-left ""
+gsettings set org.mate.Marco.global-keybindings switch-to-workspace-right ""
+gsettings set org.mate.Marco.window-keybindings move-to-workspace-down ""
+gsettings set org.mate.Marco.window-keybindings move-to-workspace-up ""
+gsettings set org.mate.Marco.window-keybindings move-to-workspace-left ""
+gsettings set org.mate.Marco.window-keybindings move-to-workspace-right ""
 
 # Upgrade system
 cd ~
