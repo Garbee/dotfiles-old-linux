@@ -84,6 +84,7 @@ php5-readline \
 ubuntu-restricted-extras \
 nginx-extras \
 postgresql-9.4 \
+postgresql-contrib-9.4 \
 oracle-java8-installer \
 vim \
 curl \
