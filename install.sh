@@ -121,6 +121,7 @@ sudo -u postgres psql -c "ALTER ROLE postgres WITH PASSWORD 'postgres'"
 sudo -u postgres psql -c "CREATE DATABASE homestead"
 sudo -u postgres psql -c "CREATE USER homestead WITH PASSWORD 'homestead'"
 sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE homestead TO homestead"
+sudo -u postgres psql -c 'CREATE EXTENSION "uuid-ossp"'
 
 # configure git
 git config --global user.name "Jonathan Garbee"
