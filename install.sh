@@ -99,7 +99,6 @@ gimp \
 gimp-plugin-registry \
 inkscape \
 beanstalkd \
-terminator \
 sublime-text \
 supervisor \
 pgadmin3 \
