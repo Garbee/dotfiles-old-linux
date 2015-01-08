@@ -105,7 +105,8 @@ supervisor \
 pgadmin3 \
 audacity \
 vlc \
-jpegoptim
+jpegoptim \
+openshot
 
 # Set new settings after software is installed
 gsettings set org.mate.applications-terminal "exec" "terminator"
