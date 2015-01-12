@@ -105,7 +105,11 @@ pgadmin3 \
 audacity \
 vlc \
 jpegoptim \
-openshot
+openshot \
+meld \
+linkchecker-gui \
+gparted \
+gpart
 
 # Set new settings after software is installed
 gsettings set org.mate.applications-terminal "exec" "terminator"
