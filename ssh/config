@@ -6,3 +6,6 @@ Host bitbucket
 Host github
 	HostName github.com
 	User git
+Host gitlab
+	HostName gitlab.com
+	User git
