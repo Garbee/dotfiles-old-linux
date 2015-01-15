@@ -155,15 +155,18 @@ mkdir .ssh
 cd .ssh
 ln -s ~/.dotfiles/ssh/config config
 
-# Setup zsh
-curl -L http://install.ohmyz.sh | sh
-mv ~/.zshrc ~/.zshrc-backup
-ln -s ~/.dotfiles/zshrc ~/.zshrc
-sudo chsh -s /bin/zsh jonathan
-
 # Configure php some
 echo 'umask 002' | sudo tee -a /etc/init/php5-fpm.conf
 sudo sed -i 's/memory_limit=128M/memory_limit=512M/g' /etc/php5/fpm/php.ini
 
 # setup hosts
 echo "127.0.0.1    uw.dev www.uw.dev beanstalk.local" | sudo tee -a /etc/hosts
+
+# Setup zsh
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
+sudo chsh -s /bin/zsh jonathan
+
