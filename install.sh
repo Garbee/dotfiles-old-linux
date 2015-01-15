@@ -169,5 +169,9 @@ setopt EXTENDED_GLOB
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
+rm ~/.zpreztorc
+ln -s ~/.dotfiles/zsh/zpreztorc ~/.zpreztorc
+rm ~/.zshrc
+ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
 sudo chsh -s /bin/zsh jonathan
 
