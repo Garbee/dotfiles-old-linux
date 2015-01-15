@@ -111,7 +111,8 @@ openshot \
 meld \
 linkchecker-gui \
 gparted \
-gpart
+gpart \
+trimage
 
 # Set new settings after software is installed
 gsettings set org.mate.applications-terminal "exec" "terminator"
