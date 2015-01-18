@@ -181,3 +181,10 @@ rm ~/.zshrc
 ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
 sudo chsh -s /bin/zsh jonathan
 
+# Get docker images
+sudo docker pull ubuntu:14.04
+sudo docker pull postgres:9.4
+sudo docker pull nginx:1.7
+sudo docker pull php:5.6-fpm
+sudo docker pull php:5.6-cli
+
