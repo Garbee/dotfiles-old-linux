@@ -61,6 +61,10 @@ sudo touch pgdg.list
 echo "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main 9.4" | sudo tee -a pgdg.list
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | \
 sudo apt-key add -
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
+sudo touch docker.list
+echo 'deb https://get.docker.com/ubuntu docker main' | sudo tee -a docker.list
+
 
 # accept terms for auto install
 echo debconf shared/accepted-oracle-license-v1-1 select true | \
@@ -112,7 +116,8 @@ meld \
 linkchecker-gui \
 gparted \
 gpart \
-trimage
+trimage \
+lxc-docker
 
 # Set new settings after software is installed
 gsettings set org.mate.applications-terminal "exec" "terminator"
